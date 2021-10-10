@@ -1,4 +1,4 @@
-<?php 
+<?php declare(strict_types=1);
 
 namespace App\Controller;
 
@@ -18,7 +18,7 @@ class HomeController extends AbstractController
     {
         return $this->render('home.twig',
             [
-                //'users' => $userRepo->findBestUsers(2),
+
             ]
         );
     }

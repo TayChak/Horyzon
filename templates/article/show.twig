@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+
+    <a href="{{ path('admin_article_add') }}">
+        <button class="btn btn-success" data-toggle="tooltip" title="ajouter un nouveau article">
+            + Add 
+        </button>
+    </a>
+    <hr>
+    <table id="article-table" class="table table-striped table-bordered nowrap" style="width:100%">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Slug</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody class="align-middle">
+        {% for article in articles %}
+            <tr>
+                <td class="align-middle">{{ article.id }}</td>
+                <td class="align-middle">{{ article.title }}</td>
+                <td class="align-middle">{{ article.date|date('Y-m-d') }}</td>
+                <td class="align-middle">{{ article.slug }}</td>
+                <td class="align-middle text-center">
+                    <div class="icon-btn">
+                        <a href="{{ path('admin_article_update', {id: article.id }) }}">
+                            <button class="btn btn-info" data-toggle="tooltip" title="éditer l'article" data-id="{{ article.id }}">
+                                Update
+                            </button>
+                        </a>
+                        <a href="{{ path('admin_article_delete', {id: article.id }) }}">
+                            <button class="btn btn-danger" data-toggle="tooltip" title="supprimer l'article">
+                                Delete 
+                            </button>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+</div>
+{% endblock %}
