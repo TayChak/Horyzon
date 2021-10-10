@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container">
+        <div class="row mb-2">
+
+            <!-- Liste des articles du blog -- DEBUT -->
+            <div class="col-md-6">
+                <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <h3 class="mb-0">
+                            <a class="text-dark" href="#">Featured post</a>
+                        </h3>
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">Ceci est une partie du texte de l'article, on affichera seulement
+                            150 caractères ensuite on coupe le texte et on complète par ... </p>
+                        <a href="article.html">Continue reading</a>
+                    </div>
+                    <img class="card-img-right flex-auto d-none d-md-block" src="https://www.fillmurray.com/200/250"
+                        alt="Card image cap">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <h3 class="mb-0">
+                            <a class="text-dark" href="#">Post title</a>
+                        </h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="card-text mb-auto">laudantium magni labore itaque voluptas cumque incidunt aperiam nam
+                            expedita reprehenderit tenetur. ....</p>
+                        <a href="article.html">Continue reading</a>
+                    </div>
+                    <img class="card-img-right flex-auto d-none d-md-block" src="https://www.fillmurray.com/201/250"
+                        alt="Card image cap">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <h3 class="mb-0">
+                            <a class="text-dark" href="#">Post title</a>
+                        </h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="card-text mb-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quae
+                            optio, facilis omnis placeat amet nemo debitis et ... </p>
+                        <a href="article.html">Continue reading</a>
+                    </div>
+                    <img class="card-img-right flex-auto d-none d-md-block" src="https://www.fillmurray.com/199/250"
+                        alt="Card image cap">
+                </div>
+            </div>
+            <!-- Liste des articles du blog -- FIN -->
+
+        </div>
+    </div>
+
+    <main role="main" class="container">
+
+
+    </main><!-- /.container -->
+{% endblock %}
